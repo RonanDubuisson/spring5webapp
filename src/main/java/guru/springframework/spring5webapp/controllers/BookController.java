@@ -13,11 +13,11 @@ public class BookController {
 
      private BookRepository bookRepository;
 
-    public BookController(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
-    }
+     public BookController(BookRepository bookRepository) {
+         this.bookRepository = bookRepository;
+     }
 
-    @RequestMapping("/books")
+     @RequestMapping("/books")
      public String getBooks(Model model){
          model.addAttribute("books", bookRepository.findAll());
 
